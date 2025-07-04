@@ -1,6 +1,0 @@
-POST http://localhost:3000/tasks
-Content-Type: application/json
-{
-    "name": "Arreglar la cama"
-    
-}
