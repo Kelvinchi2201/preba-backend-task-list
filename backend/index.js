@@ -1,5 +1,5 @@
 import express from 'express';
-import tasksRouter from './src/modules/contacts/tasks.routes.js';
+import tasksRouter from './src/modules/tasks/tasks.routes.js';
 import { ZodError } from 'zod/v4';
 import { ErrorWithStatus } from './src/utils/errorTypes.js';
 import { DatabaseError } from 'pg';
