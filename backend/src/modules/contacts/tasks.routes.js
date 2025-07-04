@@ -14,21 +14,21 @@ tasksRouter.get('/', async (req, res) => {
 });
 tasksRouter.post('/', async (req, res) => {
   const body = createTaskRouteSchema.body.parse(req.body);
-  const newContact = await tasksRepository.addOne(body);
-  res.json(newContact);
+  const newTask = await tasksRepository.addOne(body);
+  res.json(newTask);
 });
 
 tasksRouter.delete('/:id', async (req, res) => {
   const params = deleteTaskRouteSchema.params.parse(req.params);
-  const contactDeleted = await tasksRepository.deleteOneById(params.id);
-  res.json(contactDeleted);
+  const taskDeleted = await tasksRepository.deleteOneById(params.id);
+  res.json(taskDeleted);
 });
 
 tasksRouter.put('/:id', async (req, res) => {
   const body = updateTaskRouteSchema.body.parse(req.body);
   const params = updateTaskRouteSchema.params.parse(req.params);
-  const contactUpdated = await tasksRepository.updateOneByIde(params.id, body);
-  res.json(contactUpdated);
+  const taskCheck = await tasksRepository.updateOneByIde(params.id, body);
+  res.json(taskCheck);
 });
 
 export default tasksRouter;
